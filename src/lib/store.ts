@@ -123,7 +123,7 @@ export const MENU: MenuItem[] = [
     cost: 22000,
     category: 'mi-hu-tieu',
     badge: 'Bán Chạy',
-    img: 'https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&fit=crop&w=600&q=80',
+    img: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80',
     description: 'Mì dai xào tôm, mực tươi, cải ngọt, cà rốt áp chảo thơm lửa'
   },
   {
@@ -132,7 +132,7 @@ export const MENU: MenuItem[] = [
     price: 40000,
     cost: 22500,
     category: 'mi-hu-tieu',
-    img: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80',
+    img: 'https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&fit=crop&w=600&q=80',
     description: 'Mì xào thịt bò mềm ngọt cùng cải thìa, hành tỏi phi'
   },
   {
@@ -181,7 +181,7 @@ export const MENU: MenuItem[] = [
     cost: 10800,
     category: 'banh-bao-kep',
     badge: 'Best Seller',
-    img: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80',
+    img: 'https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80',
     description: 'Bánh bao kẹp ức/phi lê gà rán giòn rụm, dưa leo, sốt tương ớt mayo'
   },
   {
@@ -200,7 +200,7 @@ export const MENU: MenuItem[] = [
     cost: 14500,
     category: 'banh-bao-kep',
     badge: 'Yêu Thích',
-    img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80',
+    img: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80',
     description: 'Bánh bao kẹp tôm rán giòn thêm phô mai béo ngậy tan chảy'
   },
   {
@@ -209,7 +209,7 @@ export const MENU: MenuItem[] = [
     price: 25000,
     cost: 13500,
     category: 'banh-bao-kep',
-    img: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=600&q=80',
+    img: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80',
     description: 'Bánh bao kẹp thịt nướng sốt BBQ khói thơm lừng'
   },
 
