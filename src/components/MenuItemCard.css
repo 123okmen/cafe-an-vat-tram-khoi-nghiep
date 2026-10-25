@@ -71,21 +71,23 @@
 
 .menu-card__badge {
   position: absolute;
-  top: 6px;
-  right: 6px;
-  min-width: 24px;
-  height: 24px;
-  padding: 0 6px;
-  border-radius: 4px;
-  background: var(--accent-color);
+  top: 4px;
+  right: 4px;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 5px;
+  border-radius: 50%;
+  background: #10b981;
   color: #fff;
   font-weight: 800;
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
   z-index: 2;
+  box-shadow: 0 2px 8px rgba(16, 185, 129, 0.5);
+  border: 1.5px solid #0f172a;
 }
 
 .menu-card__tag {
