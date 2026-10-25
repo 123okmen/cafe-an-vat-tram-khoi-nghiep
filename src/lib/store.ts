@@ -171,7 +171,7 @@ export const MENU: MenuItem[] = [
     price: 18000,
     cost: 9500,
     category: 'banh-bao-kep',
-    img: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80',
+    img: 'https://images.unsplash.com/photo-1627308595229-7830a5c91f9f?auto=format&fit=crop&w=600&q=80',
     description: 'Vỏ bánh bao hấp mềm xốp kẹp xúc xích chiên, rau xà lách & sốt'
   },
   {
@@ -181,7 +181,7 @@ export const MENU: MenuItem[] = [
     cost: 10800,
     category: 'banh-bao-kep',
     badge: 'Best Seller',
-    img: 'https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80',
+    img: 'https://images.unsplash.com/photo-1562967914-608f82629710?auto=format&fit=crop&w=600&q=80',
     description: 'Bánh bao kẹp ức/phi lê gà rán giòn rụm, dưa leo, sốt tương ớt mayo'
   },
   {
@@ -190,7 +190,7 @@ export const MENU: MenuItem[] = [
     price: 24000,
     cost: 13000,
     category: 'banh-bao-kep',
-    img: 'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&q=80',
+    img: 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=600&q=80',
     description: 'Bánh bao kẹp chả tôm tẩm bột chiên giòn nóng hổi'
   },
   {
@@ -200,7 +200,7 @@ export const MENU: MenuItem[] = [
     cost: 14500,
     category: 'banh-bao-kep',
     badge: 'Yêu Thích',
-    img: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80',
+    img: 'https://images.unsplash.com/photo-1586190848861-99aa4a171e90?auto=format&fit=crop&w=600&q=80',
     description: 'Bánh bao kẹp tôm rán giòn thêm phô mai béo ngậy tan chảy'
   },
   {
@@ -209,7 +209,7 @@ export const MENU: MenuItem[] = [
     price: 25000,
     cost: 13500,
     category: 'banh-bao-kep',
-    img: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80',
+    img: 'https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80',
     description: 'Bánh bao kẹp thịt nướng sốt BBQ khói thơm lừng'
   },
 
