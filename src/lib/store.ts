@@ -45,7 +45,7 @@ export const MENU: MenuItem[] = [
     cost: 13000,
     category: 'com-nong',
     badge: 'Giá Sinh Viên',
-    img: 'https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=600&q=80',
+    img: 'menu/com-1.jpg',
     description: 'Cơm chiên tỏi hạt vàng tơi phủ lớp trứng chiên mềm béo'
   },
   {
@@ -55,7 +55,7 @@ export const MENU: MenuItem[] = [
     cost: 22000,
     category: 'com-nong',
     badge: 'Best Seller',
-    img: 'https://images.unsplash.com/photo-1598515214211-89d3c73ae83b?auto=format&fit=crop&w=600&q=80',
+    img: 'menu/com-2.jpg',
     description: 'Đùi/góc tư gà chiên xối mỡ da giòn rụm + Cơm chiên đỏ + Đồ chua'
   },
   {
@@ -65,7 +65,7 @@ export const MENU: MenuItem[] = [
     cost: 22000,
     category: 'com-nong',
     badge: 'Đậm Vị',
-    img: 'https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80',
+    img: 'menu/com-3.jpg',
     description: 'Gà chiên giòn áo sốt mắm tỏi ớt kẹo thơm lừng'
   },
   {
@@ -74,7 +74,7 @@ export const MENU: MenuItem[] = [
     price: 40000,
     cost: 22500,
     category: 'com-nong',
-    img: 'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&q=80',
+    img: 'menu/com-4.jpg',
     description: 'Tôm, mực tươi, rau củ hạt lựu chiên lửa lớn chuẩn vị'
   },
   {
@@ -83,7 +83,7 @@ export const MENU: MenuItem[] = [
     price: 40000,
     cost: 22500,
     category: 'com-nong',
-    img: 'https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=600&q=80',
+    img: 'menu/com-5.jpg',
     description: 'Cơm trắng dùng kèm tôm mực xào rau củ sốt dầu hào đậm đà'
   },
   {
@@ -93,7 +93,7 @@ export const MENU: MenuItem[] = [
     cost: 23000,
     category: 'com-nong',
     badge: 'Hot',
-    img: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80',
+    img: 'menu/com-6.jpg',
     description: 'Thịt bò thái vuông áp chảo lửa lớn cùng ớt chuông, hành tây'
   },
   {
@@ -102,7 +102,7 @@ export const MENU: MenuItem[] = [
     price: 40000,
     cost: 22500,
     category: 'com-nong',
-    img: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=600&q=80',
+    img: 'menu/com-7.jpg',
     description: 'Thịt bò mềm xào cải ngọt, cà rốt, bông cải tươi giòn'
   },
   {
@@ -111,7 +111,7 @@ export const MENU: MenuItem[] = [
     price: 40000,
     cost: 22000,
     category: 'com-nong',
-    img: 'https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=600&q=80',
+    img: 'menu/com-8.jpg',
     description: 'Sườn non chiên áo sốt chua ngọt đậm đà, đưa cơm'
   },
 
@@ -123,7 +123,7 @@ export const MENU: MenuItem[] = [
     cost: 22000,
     category: 'mi-hu-tieu',
     badge: 'Bán Chạy',
-    img: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80',
+    img: 'menu/mi-1.jpg',
     description: 'Mì dai xào tôm, mực tươi, cải ngọt, cà rốt áp chảo thơm lửa'
   },
   {
@@ -132,7 +132,7 @@ export const MENU: MenuItem[] = [
     price: 40000,
     cost: 22500,
     category: 'mi-hu-tieu',
-    img: 'https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&fit=crop&w=600&q=80',
+    img: 'menu/mi-2.jpg',
     description: 'Mì xào thịt bò mềm ngọt cùng cải thìa, hành tỏi phi'
   },
   {
@@ -142,7 +142,7 @@ export const MENU: MenuItem[] = [
     cost: 22000,
     category: 'mi-hu-tieu',
     badge: 'Đặc Biệt',
-    img: 'https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=600&q=80',
+    img: 'menu/mi-3.jpg',
     description: 'Vắt mì chiên giòn rụm rưới sốt hải sản / bò rau củ sánh quyện'
   },
   {
@@ -151,7 +151,7 @@ export const MENU: MenuItem[] = [
     price: 40000,
     cost: 22000,
     category: 'mi-hu-tieu',
-    img: 'https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=600&q=80',
+    img: 'menu/mi-4.jpg',
     description: 'Sợi hủ tiếu dai xào khô lửa lớn với giá hẹ, bò hoặc hải sản'
   },
   {
@@ -160,7 +160,7 @@ export const MENU: MenuItem[] = [
     price: 40000,
     cost: 22000,
     category: 'mi-hu-tieu',
-    img: 'https://images.unsplash.com/photo-1565299585323-38d6b0865b47?auto=format&fit=crop&w=600&q=80',
+    img: 'menu/mi-5.jpg',
     description: 'Hủ tiếu áp chảo thơm khói chan sốt nước sệt đậm vị kiểu Hoa'
   },
 
@@ -171,7 +171,7 @@ export const MENU: MenuItem[] = [
     price: 18000,
     cost: 9500,
     category: 'banh-bao-kep',
-    img: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80',
+    img: 'menu/bbk-1.jpg',
     description: 'Vỏ bánh bao hấp mềm xốp kẹp xúc xích chiên, rau xà lách & sốt'
   },
   {
@@ -181,7 +181,7 @@ export const MENU: MenuItem[] = [
     cost: 10800,
     category: 'banh-bao-kep',
     badge: 'Best Seller',
-    img: 'https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?auto=format&fit=crop&w=600&q=80',
+    img: 'menu/bbk-2.jpg',
     description: 'Bánh bao kẹp ức/phi lê gà rán giòn rụm, dưa leo, sốt tương ớt mayo'
   },
   {
@@ -190,7 +190,7 @@ export const MENU: MenuItem[] = [
     price: 24000,
     cost: 13000,
     category: 'banh-bao-kep',
-    img: 'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&q=80',
+    img: 'menu/bbk-3.jpg',
     description: 'Bánh bao kẹp chả tôm tẩm bột chiên giòn nóng hổi'
   },
   {
@@ -200,7 +200,7 @@ export const MENU: MenuItem[] = [
     cost: 14500,
     category: 'banh-bao-kep',
     badge: 'Yêu Thích',
-    img: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80',
+    img: 'menu/bbk-4.jpg',
     description: 'Bánh bao kẹp tôm rán giòn thêm phô mai béo ngậy tan chảy'
   },
   {
@@ -209,7 +209,7 @@ export const MENU: MenuItem[] = [
     price: 25000,
     cost: 13500,
     category: 'banh-bao-kep',
-    img: 'https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80',
+    img: 'menu/bbk-5.jpg',
     description: 'Bánh bao kẹp thịt nướng sốt BBQ khói thơm lừng'
   },
 
@@ -221,7 +221,7 @@ export const MENU: MenuItem[] = [
     cost: 15000,
     category: 'fastfood-an-vat',
     badge: 'FastFood',
-    img: 'https://images.unsplash.com/photo-1552611052-33e04de081de?auto=format&fit=crop&w=600&q=80',
+    img: 'menu/ff-1.jpg',
     description: 'Vỏ bánh Burger mè kẹp nhân bò/gà rán, xà lách, cà chua, phô mai'
   },
   {
@@ -230,7 +230,7 @@ export const MENU: MenuItem[] = [
     price: 22000,
     cost: 11500,
     category: 'fastfood-an-vat',
-    img: 'https://images.unsplash.com/photo-1569718212165-3a8278d5f624?auto=format&fit=crop&w=600&q=80',
+    img: 'menu/ff-2.jpg',
     description: 'Bánh mì Sandwich áp chảo kẹp trứng, xúc xích, rau sốt béo'
   },
   {
@@ -240,7 +240,7 @@ export const MENU: MenuItem[] = [
     cost: 16000,
     category: 'fastfood-an-vat',
     badge: 'Hot Trend',
-    img: 'https://images.unsplash.com/photo-1585032226651-759b368d7246?auto=format&fit=crop&w=600&q=80',
+    img: 'menu/ff-3.jpg',
     description: 'Mì trộn sốt đậm đà kèm xúc xích khía, gà rán, trứng ốp la'
   },
   {
@@ -250,7 +250,7 @@ export const MENU: MenuItem[] = [
     cost: 22000,
     category: 'fastfood-an-vat',
     badge: 'Món Tối',
-    img: 'https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=600&q=80',
+    img: 'menu/ff-4.jpg',
     description: 'Mì Koreno nấu kim chi chua cay cùng bò, tôm, mực, cá viên, bông cải'
   },
   {
@@ -259,7 +259,7 @@ export const MENU: MenuItem[] = [
     price: 20000,
     cost: 10000,
     category: 'fastfood-an-vat',
-    img: 'https://images.unsplash.com/photo-1541592106381-b31e9677c0e5?auto=format&fit=crop&w=600&q=80',
+    img: 'menu/ff-5.jpg',
     description: 'Bánh tráng dẻo trộn khô bò, trứng cút, xoài xanh, rau răm, sốt tắc'
   },
 
@@ -270,7 +270,7 @@ export const MENU: MenuItem[] = [
     price: 5000,
     cost: 3200,
     category: 'topping',
-    img: 'https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=600&q=80'
+    img: 'menu/tp-1.jpg'
   },
   {
     id: 'tp-2',
@@ -278,7 +278,7 @@ export const MENU: MenuItem[] = [
     price: 5000,
     cost: 3000,
     category: 'topping',
-    img: 'https://images.unsplash.com/photo-1563379091339-03b21ab4a4f8?auto=format&fit=crop&w=600&q=80'
+    img: 'menu/tp-2.jpg'
   },
   {
     id: 'tp-3',
@@ -286,7 +286,7 @@ export const MENU: MenuItem[] = [
     price: 8000,
     cost: 4500,
     category: 'topping',
-    img: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=600&q=80'
+    img: 'menu/tp-3.jpg'
   },
   {
     id: 'tp-4',
@@ -294,7 +294,7 @@ export const MENU: MenuItem[] = [
     price: 5000,
     cost: 2800,
     category: 'topping',
-    img: 'https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=600&q=80'
+    img: 'menu/tp-4.jpg'
   },
   {
     id: 'tp-5',
@@ -302,7 +302,7 @@ export const MENU: MenuItem[] = [
     price: 10000,
     cost: 6500,
     category: 'topping',
-    img: 'https://images.unsplash.com/photo-1567620905732-2d1ec7ab7445?auto=format&fit=crop&w=600&q=80'
+    img: 'menu/tp-5.jpg'
   }
 ];
 
