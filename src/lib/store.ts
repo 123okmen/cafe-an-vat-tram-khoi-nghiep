@@ -190,7 +190,7 @@ export const MENU: MenuItem[] = [
     price: 24000,
     cost: 13000,
     category: 'banh-bao-kep',
-    img: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=600&q=80',
+    img: 'https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=600&q=80',
     description: 'Bánh bao kẹp chả tôm tẩm bột chiên giòn nóng hổi'
   },
   {
