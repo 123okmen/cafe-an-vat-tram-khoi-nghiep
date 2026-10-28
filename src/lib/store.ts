@@ -2,20 +2,18 @@
 // Địa chỉ: 36/5E Nguyễn Thị Ngâu, Trung Đông 8, Xã Đông Thạnh, TP.HCM
 
 export const BRAND_NAME = 'CAFE ĂN VẶT TRẠM KHỞI NGHIỆP';
-export const BRAND_SUBTITLE = 'Cơm Chiên · Mì Xào · Bánh Bao Kẹp · FastFood';
+export const BRAND_SUBTITLE = 'Cà Phê Muối · Trà Dâu · Đồ Ăn Vặt Nóng Hổi · Mì Trộn Mì Cay';
 export const STORE_ADDRESS = '36/5E Nguyễn Thị Ngâu, Trung Đông 8, Xã Đông Thạnh, TP.HCM';
 export const STORE_HOTLINE = '0938.888.xxx';
 
-export type Category = 'com-nong' | 'mi-hu-tieu' | 'banh-bao-kep' | 'fastfood-an-vat' | 'topping';
+export type Category = 'cafe-tra' | 'nuoc-sam' | 'do-an-vat' | 'mi-cay-tron' | 'topping';
 
 export interface MenuItem {
   id: string;
   name: string;
   price: number;
   category: Category;
-  /** Giá vốn ước tính (COGS) để phân tích lợi nhuận */
   cost?: number;
-  /** Tên file ảnh trong thư mục public/. Không có ảnh → hiển thị emoji của danh mục. */
   img?: string;
   description?: string;
   badge?: string;
@@ -29,252 +27,271 @@ export interface CategoryInfo {
 }
 
 export const CATEGORIES: CategoryInfo[] = [
-  { id: 'com-nong', label: 'Cơm Chiên & Cơm Nóng', emoji: '🍛', color: '#f59e0b' },
-  { id: 'mi-hu-tieu', label: 'Mì Xào & Hủ Tiếu', emoji: '🍜', color: '#ef4444' },
-  { id: 'banh-bao-kep', label: 'Bánh Bao Kẹp (BBK)', emoji: '🥟', color: '#10b981' },
-  { id: 'fastfood-an-vat', label: 'Burger · Mì Trộn · Mì Cay', emoji: '🍔', color: '#ec4899' },
-  { id: 'topping', label: 'Topping & Nước Uống', emoji: '➕', color: '#3b82f6' },
+  { id: 'cafe-tra', label: 'Cà Phê & Trà', emoji: '☕', color: '#f59e0b' },
+  { id: 'nuoc-sam', label: 'Nước Sâm & Nước Ép', emoji: '🥤', color: '#10b981' },
+  { id: 'do-an-vat', label: 'Đồ Ăn Vặt Nóng Hổi', emoji: '🍟', color: '#ef4444' },
+  { id: 'mi-cay-tron', label: 'Mì Trộn & Mì Cay', emoji: '🍜', color: '#ec4899' },
+  { id: 'topping', label: 'Topping Thêm', emoji: '➕', color: '#3b82f6' },
 ];
 
 export const MENU: MenuItem[] = [
-  // --- 1. CƠM CHIÊN & CƠM NÓNG (Giá vốn thực tế gồm: Thịt/Hải sản + Gạo + Rau/Đồ chua + Dầu/Gia vị + Hộp 3 ngăn/Muỗng) ---
+  // --- 1. CÀ PHÊ & TRÀ ---
   {
-    id: 'com-1',
-    name: 'Cơm Chiên Phủ Trứng',
-    price: 25000,
-    cost: 13000,
-    category: 'com-nong',
-    badge: 'Giá Sinh Viên',
-    img: 'menu/com-1.jpg',
-    description: 'Cơm chiên tỏi hạt vàng tơi phủ lớp trứng chiên mềm béo'
-  },
-  {
-    id: 'com-2',
-    name: 'Cơm Gà Xối Mỡ',
-    price: 40000,
-    cost: 22000,
-    category: 'com-nong',
+    id: 'cf-1',
+    name: 'Cà Phê Muối Kem Béo',
+    price: 20000,
+    cost: 7500,
+    category: 'cafe-tra',
     badge: 'Best Seller',
-    img: 'menu/com-2.jpg',
-    description: 'Đùi/góc tư gà chiên xối mỡ da giòn rụm + Cơm chiên đỏ + Đồ chua'
+    img: 'menu/cf-1.jpg',
+    description: 'Cà phê pha phin mộc đậm đà phủ lớp kem mặn béo ngậy chuẩn vị Huế'
   },
   {
-    id: 'com-3',
-    name: 'Cơm Gà Chiên Mắm Tỏi',
-    price: 40000,
-    cost: 22000,
-    category: 'com-nong',
-    badge: 'Đậm Vị',
-    img: 'menu/com-3.jpg',
-    description: 'Gà chiên giòn áo sốt mắm tỏi ớt kẹo thơm lừng'
+    id: 'cf-2',
+    name: 'Cà Phê Đen Đá Phin',
+    price: 15000,
+    cost: 4500,
+    category: 'cafe-tra',
+    img: 'menu/cf-2.jpg',
+    description: 'Cà phê nguyên chất rang mộc đắng dịu, hậu ngọt đậm hương thơm'
   },
   {
-    id: 'com-4',
-    name: 'Cơm Chiên Hải Sản',
-    price: 40000,
-    cost: 22500,
-    category: 'com-nong',
-    img: 'menu/com-4.jpg',
-    description: 'Tôm, mực tươi, rau củ hạt lựu chiên lửa lớn chuẩn vị'
+    id: 'cf-3',
+    name: 'Cà Phê Sữa Đá Sài Gòn',
+    price: 18000,
+    cost: 6000,
+    category: 'cafe-tra',
+    badge: 'Phổ Biến',
+    img: 'menu/cf-3.jpg',
+    description: 'Cà phê sữa đá ngọt thanh béo ngậy truyền thống'
   },
   {
-    id: 'com-5',
-    name: 'Cơm Xào Hải Sản',
-    price: 40000,
-    cost: 22500,
-    category: 'com-nong',
-    img: 'menu/com-5.jpg',
-    description: 'Cơm trắng dùng kèm tôm mực xào rau củ sốt dầu hào đậm đà'
+    id: 'cf-4',
+    name: 'Bạc Xỉu 3 Tầng Sữa Đá',
+    price: 20000,
+    cost: 7000,
+    category: 'cafe-tra',
+    img: 'menu/cf-4.jpg',
+    description: 'Nhiều sữa đặc ngọt dịu hòa quyện chút cà phê thơm nồng'
   },
   {
-    id: 'com-6',
-    name: 'Cơm Bò Lúc Lắc',
-    price: 40000,
-    cost: 23000,
-    category: 'com-nong',
-    badge: 'Hot',
-    img: 'menu/com-6.jpg',
-    description: 'Thịt bò thái vuông áp chảo lửa lớn cùng ớt chuông, hành tây'
+    id: 'cf-5',
+    name: 'Trà Dâu Tươi Tằm',
+    price: 25000,
+    cost: 9000,
+    category: 'cafe-tra',
+    badge: 'Hot Trend',
+    img: 'menu/cf-5.jpg',
+    description: 'Trà lài thơm ngát ngâm dâu tây chua ngọt thanh mát giải nhiệt'
   },
   {
-    id: 'com-7',
-    name: 'Cơm Bò Xào Rau Củ',
-    price: 40000,
-    cost: 22500,
-    category: 'com-nong',
-    img: 'menu/com-7.jpg',
-    description: 'Thịt bò mềm xào cải ngọt, cà rốt, bông cải tươi giòn'
+    id: 'cf-6',
+    name: 'Trà Đào Cam Sả',
+    price: 25000,
+    cost: 9500,
+    category: 'cafe-tra',
+    img: 'menu/cf-6.jpg',
+    description: 'Trà đào vàng giòn sần sật kèm tinh chất cam sả thư thái'
   },
   {
-    id: 'com-8',
-    name: 'Cơm Sườn Chua Ngọt',
-    price: 40000,
-    cost: 22000,
-    category: 'com-nong',
-    img: 'menu/com-8.jpg',
-    description: 'Sườn non chiên áo sốt chua ngọt đậm đà, đưa cơm'
+    id: 'cf-7',
+    name: 'Trà Sữa Trân Châu Đường Đen',
+    price: 25000,
+    cost: 10000,
+    category: 'cafe-tra',
+    badge: 'Yêu Thích',
+    img: 'menu/cf-7.jpg',
+    description: 'Trà sữa thơm béo kèm trân châu hoàng kim dẻo dai ngọt dịu'
+  },
+  {
+    id: 'cf-8',
+    name: 'Trà Chanh Mật Ong Giã Tay',
+    price: 18000,
+    cost: 5500,
+    category: 'cafe-tra',
+    img: 'menu/cf-8.jpg',
+    description: 'Chanh tươi giã tay tinh dầu thơm nức kết hợp mật ong ngọt thanh'
   },
 
-  // --- 2. MÌ XÀO & HỦ TIẾU ---
+  // --- 2. NƯỚC SÂM & NƯỚC ÉP ---
+  {
+    id: 'sam-1',
+    name: 'Nước Sâm Bí Đao La Hán Quả',
+    price: 15000,
+    cost: 4500,
+    category: 'nuoc-sam',
+    badge: 'Đặc Sản',
+    img: 'menu/sam-1.jpg',
+    description: 'Bí đao tươi nấu cùng la hán quả, mía lau, râu bắp thanh mát ngọt thanh tự nhiên'
+  },
+  {
+    id: 'sam-2',
+    name: 'Nước Sâm Hoa Cúc Hạt Chia',
+    price: 18000,
+    cost: 5500,
+    category: 'nuoc-sam',
+    img: 'menu/sam-2.jpg',
+    description: 'Hoa cúc vàng thơm nhẹ mát gan bổ mắt kèm hạt chia giàu dưỡng chất'
+  },
+  {
+    id: 'sam-3',
+    name: 'Nước Mía Sầu Riêng / Tắc',
+    price: 15000,
+    cost: 5000,
+    category: 'nuoc-sam',
+    img: 'menu/sam-3.jpg',
+    description: 'Mía tươi ép nguyên chất thơm lừng vị sầu riêng hoặc chua thanh trái tắc'
+  },
+  {
+    id: 'ep-1',
+    name: 'Nước Ép Cam Tươi Nguyên Chất',
+    price: 25000,
+    cost: 11000,
+    category: 'nuoc-sam',
+    badge: 'Vitamin C',
+    img: 'menu/ep-1.jpg',
+    description: 'Cam sành miền Tây vắt tươi nguyên chất bổ sung vitamin C tức thì'
+  },
+  {
+    id: 'ep-2',
+    name: 'Nước Ép Dưa Hấu Đỏ',
+    price: 22000,
+    cost: 8500,
+    category: 'nuoc-sam',
+    img: 'menu/ep-2.jpg',
+    description: 'Dưa hấu tươi mát ngọt ngào không thêm phẩm màu'
+  },
+
+  // --- 3. ĐỒ ĂN VẶT NÓNG HỔI ---
+  {
+    id: 'av-1',
+    name: 'Cá Viên Chiên Nước Mắm Bơ Tỏi',
+    price: 30000,
+    cost: 13000,
+    category: 'do-an-vat',
+    badge: 'Best Seller',
+    img: 'menu/av-1.jpg',
+    description: 'Cá viên chiên giòn lắc nước mắm kẹo bơ tỏi thơm nức, thêm đậu bắp sốt'
+  },
+  {
+    id: 'av-2',
+    name: 'Khoai Tây Chiên Lắc Phô Mai',
+    price: 25000,
+    cost: 9500,
+    category: 'do-an-vat',
+    img: 'menu/av-2.jpg',
+    description: 'Khoai tây giòn rụm áo lớp bột phô mai cam béo mặn cuốn hút'
+  },
+  {
+    id: 'av-3',
+    name: 'Gà Lắc Rong Biển / Phô Mai',
+    price: 30000,
+    cost: 13500,
+    category: 'do-an-vat',
+    badge: 'Giòn Rụm',
+    img: 'menu/av-3.jpg',
+    description: 'Ức gà phi lê cắt viên tẩm bột chiên giòn tan lắc rong biển thơm ngon'
+  },
+  {
+    id: 'av-4',
+    name: 'Xúc Xích Đức Nướng / Chiên',
+    price: 15000,
+    cost: 6500,
+    category: 'do-an-vat',
+    img: 'menu/av-4.jpg',
+    description: 'Xúc xích Đức xông khói thịt chắc giòn chấm tương ớt cay nhẹ'
+  },
+  {
+    id: 'av-5',
+    name: 'Bắp Xào Tôm Bơ Trứng Muối',
+    price: 25000,
+    cost: 10500,
+    category: 'do-an-vat',
+    img: 'menu/av-5.jpg',
+    description: 'Bắp ngọt vàng xào ruốc tôm thơm lừng bơ và hành lá giòn ngọt'
+  },
+  {
+    id: 'av-6',
+    name: 'Bánh Tráng Trộn Sa Tế Tắc',
+    price: 20000,
+    cost: 8000,
+    category: 'do-an-vat',
+    badge: 'Ăn Vặt',
+    img: 'menu/av-6.jpg',
+    description: 'Bánh tráng dẻo mềm kèm trứng cút, khô bò, xoài xanh và sốt sa tế chua cay'
+  },
+  {
+    id: 'av-7',
+    name: 'Bánh Tráng Cuộn Bơ Trứng Cút',
+    price: 22000,
+    cost: 9000,
+    category: 'do-an-vat',
+    img: 'menu/av-7.jpg',
+    description: 'Bánh tráng cuộn sốt bơ trứng cút béo ngậy hành phi vàng giòn'
+  },
+  {
+    id: 'av-8',
+    name: 'Hồ Lô Nướng Mật Ong',
+    price: 25000,
+    cost: 11000,
+    category: 'do-an-vat',
+    img: 'menu/av-8.jpg',
+    description: 'Viên hồ lô tròn căng mọng nướng vàng bóng thơm lừng mật ong'
+  },
+  {
+    id: 'av-9',
+    name: 'Phô Mai Que Kéo Sợi (3 cây)',
+    price: 25000,
+    cost: 12000,
+    category: 'do-an-vat',
+    img: 'menu/av-9.jpg',
+    description: 'Phô mai que chiên xù vàng ươm kéo sợi mozzarella béo ngậy chấm sốt tương cà'
+  },
+
+  // --- 4. MÌ TRỘN & MÌ CAY ---
   {
     id: 'mi-1',
-    name: 'Mì Xào Hải Sản',
-    price: 40000,
-    cost: 22000,
-    category: 'mi-hu-tieu',
-    badge: 'Bán Chạy',
+    name: 'Mì Trộn Xúc Xích Trứng Đào',
+    price: 30000,
+    cost: 14000,
+    category: 'mi-cay-tron',
+    badge: 'No Bụng',
     img: 'menu/mi-1.jpg',
-    description: 'Mì dai xào tôm, mực tươi, cải ngọt, cà rốt áp chảo thơm lửa'
+    description: 'Mì Indomie sốt cay ngọt, xúc xích chiên giòn, trứng lòng đào hồng đào béo ngậy'
   },
   {
     id: 'mi-2',
-    name: 'Mì Xào Bò',
-    price: 40000,
-    cost: 22500,
-    category: 'mi-hu-tieu',
+    name: 'Mì Trộn Cá Viên Sa Tế Bơ Tỏi',
+    price: 35000,
+    cost: 16000,
+    category: 'mi-cay-tron',
+    badge: 'Đặc Biệt',
     img: 'menu/mi-2.jpg',
-    description: 'Mì xào thịt bò mềm ngọt cùng cải thìa, hành tỏi phi'
+    description: 'Mì trộn đẫm sốt sa tế bơ tỏi cùng cá viên chiên giòn, rau cải thìa tươi'
   },
   {
     id: 'mi-3',
-    name: 'Mì Giòn (Mì Xào Giòn)',
-    price: 40000,
-    cost: 22000,
-    category: 'mi-hu-tieu',
-    badge: 'Đặc Biệt',
-    img: 'menu/mi-3.jpg',
-    description: 'Vắt mì chiên giòn rụm rưới sốt hải sản / bò rau củ sánh quyện'
-  },
-  {
-    id: 'mi-4',
-    name: 'Hủ Tiếu Xào Khô (Bò/Hải Sản)',
-    price: 40000,
-    cost: 22000,
-    category: 'mi-hu-tieu',
-    img: 'menu/mi-4.jpg',
-    description: 'Sợi hủ tiếu dai xào khô lửa lớn với giá hẹ, bò hoặc hải sản'
-  },
-  {
-    id: 'mi-5',
-    name: 'Hủ Tiếu Xào Nước (Bò/Hải Sản)',
-    price: 40000,
-    cost: 22000,
-    category: 'mi-hu-tieu',
-    img: 'menu/mi-5.jpg',
-    description: 'Hủ tiếu áp chảo thơm khói chan sốt nước sệt đậm vị kiểu Hoa'
-  },
-
-  // --- 3. BÁNH BAO KẸP (BBK) ---
-  {
-    id: 'bbk-1',
-    name: 'BBK Xúc Xích',
-    price: 18000,
-    cost: 9500,
-    category: 'banh-bao-kep',
-    img: 'menu/bbk-1.jpg',
-    description: 'Vỏ bánh bao hấp mềm xốp kẹp xúc xích chiên, rau xà lách & sốt'
-  },
-  {
-    id: 'bbk-2',
-    name: 'BBK Gà Rán',
-    price: 20000,
-    cost: 10800,
-    category: 'banh-bao-kep',
-    badge: 'Best Seller',
-    img: 'menu/bbk-2.jpg',
-    description: 'Bánh bao kẹp ức/phi lê gà rán giòn rụm, dưa leo, sốt tương ớt mayo'
-  },
-  {
-    id: 'bbk-3',
-    name: 'BBK Tôm Rán',
-    price: 24000,
-    cost: 13000,
-    category: 'banh-bao-kep',
-    img: 'menu/bbk-3.jpg',
-    description: 'Bánh bao kẹp chả tôm tẩm bột chiên giòn nóng hổi'
-  },
-  {
-    id: 'bbk-4',
-    name: 'BBK Tôm Phô Mai',
-    price: 26000,
-    cost: 14500,
-    category: 'banh-bao-kep',
-    badge: 'Yêu Thích',
-    img: 'menu/bbk-4.jpg',
-    description: 'Bánh bao kẹp tôm rán giòn thêm phô mai béo ngậy tan chảy'
-  },
-  {
-    id: 'bbk-5',
-    name: 'BBK Sườn BBQ',
-    price: 25000,
-    cost: 13500,
-    category: 'banh-bao-kep',
-    img: 'menu/bbk-5.jpg',
-    description: 'Bánh bao kẹp thịt nướng sốt BBQ khói thơm lừng'
-  },
-
-  // --- 4. HAMBURGER, SANDWICH, MÌ TRỘN, MÌ CAY, BÁNH TRÁNG TRỘN ---
-  {
-    id: 'ff-1',
-    name: 'Hamburger Bò / Gà Giòn Phô Mai',
-    price: 28000,
-    cost: 15000,
-    category: 'fastfood-an-vat',
-    badge: 'FastFood',
-    img: 'menu/ff-1.jpg',
-    description: 'Vỏ bánh Burger mè kẹp nhân bò/gà rán, xà lách, cà chua, phô mai'
-  },
-  {
-    id: 'ff-2',
-    name: 'Sandwich Kẹp Trứng Xúc Xích / Gà',
-    price: 22000,
-    cost: 11500,
-    category: 'fastfood-an-vat',
-    img: 'menu/ff-2.jpg',
-    description: 'Bánh mì Sandwich áp chảo kẹp trứng, xúc xích, rau sốt béo'
-  },
-  {
-    id: 'ff-3',
-    name: 'Mì Trộn Thập Cẩm (Xúc Xích + Gà + Trứng)',
-    price: 30000,
-    cost: 16000,
-    category: 'fastfood-an-vat',
-    badge: 'Hot Trend',
-    img: 'menu/ff-3.jpg',
-    description: 'Mì trộn sốt đậm đà kèm xúc xích khía, gà rán, trứng ốp la'
-  },
-  {
-    id: 'ff-4',
-    name: 'Mì Cay 7 Cấp Độ (Bò / Hải Sản)',
-    price: 40000,
-    cost: 22000,
-    category: 'fastfood-an-vat',
+    name: 'Mì Cay Hàn Quốc Bò Kim Chi',
+    price: 45000,
+    cost: 23000,
+    category: 'mi-cay-tron',
     badge: 'Món Tối',
-    img: 'menu/ff-4.jpg',
-    description: 'Mì Koreno nấu kim chi chua cay cùng bò, tôm, mực, cá viên, bông cải'
-  },
-  {
-    id: 'ff-5',
-    name: 'Bánh Tráng Trộn Đặc Biệt',
-    price: 20000,
-    cost: 10000,
-    category: 'fastfood-an-vat',
-    img: 'menu/ff-5.jpg',
-    description: 'Bánh tráng dẻo trộn khô bò, trứng cút, xoài xanh, rau răm, sốt tắc'
+    img: 'menu/mi-3.jpg',
+    description: 'Mì Koreno sợi dai nấu nước dùng kim chi chua cay cùng thịt bò Mỹ và nấm kim châm'
   },
 
-  // --- 5. TOPPING & NƯỚC UỐNG ---
+  // --- 5. TOPPING THÊM ---
   {
     id: 'tp-1',
-    name: 'Trứng Ốp La / Trứng Phủ Thêm',
+    name: 'Thêm Trân Châu / Thạch Củ Năng',
     price: 5000,
-    cost: 3200,
+    cost: 2000,
     category: 'topping',
     img: 'menu/tp-1.jpg'
   },
   {
     id: 'tp-2',
-    name: 'Phô Mai Lát Thêm',
+    name: 'Thêm Trứng Ốp La / Lòng Đào',
     price: 5000,
     cost: 3000,
     category: 'topping',
@@ -282,27 +299,11 @@ export const MENU: MenuItem[] = [
   },
   {
     id: 'tp-3',
-    name: 'Xúc Xích Chiên Thêm',
+    name: 'Thêm Xúc Xích / Cá Viên',
     price: 8000,
-    cost: 4500,
+    cost: 4000,
     category: 'topping',
     img: 'menu/tp-3.jpg'
-  },
-  {
-    id: 'tp-4',
-    name: 'Cơm Thêm / Vắt Mì Thêm',
-    price: 5000,
-    cost: 2800,
-    category: 'topping',
-    img: 'menu/tp-4.jpg'
-  },
-  {
-    id: 'tp-5',
-    name: 'Pepsi / Coca / 7Up / Trà Đá',
-    price: 10000,
-    cost: 6500,
-    category: 'topping',
-    img: 'menu/tp-5.jpg'
   }
 ];
 
@@ -327,42 +328,36 @@ export interface ShiftSchedule {
 export const STORE_SCHEDULE: ShiftSchedule[] = [
   {
     id: 'prep',
-    time: '05h45 - 06h15',
+    time: '06h00 - 06h30',
     name: 'Chuẩn bị đầu ca sáng',
-    tasks: 'Bật nồi hấp bánh bao size 42/52 (lót màng lưới chống dính), làm nóng bếp chiên nhúng, chuẩn bị khay inox 15x25 đựng rau/nhân, nấu mẻ cơm đầu ngày.'
+    tasks: 'Kiểm tra máy pha cà phê, nấu sâm bí đao mẻ tươi đầu ngày, kiểm tra tủ lạnh rau củ quả & đá sạch.'
   },
   {
     id: 'sang',
-    time: '06h15 - 10h30',
-    name: 'Ca Sáng (Bánh Bao Kẹp · Burger · Sandwich · Mì Trộn)',
-    tasks: 'Phục vụ ăn sáng nhanh mang đi cho học sinh, người đi làm: Bánh bao kẹp (18k-26k), Hamburger, Sandwich, Cơm chiên phủ trứng (25k). Ra món trong 60-90 giây.',
+    time: '06h30 - 11h30',
+    name: 'Ca Sáng (Cà Phê Muối · Trà Sáng · Điểm Tâm)',
+    tasks: 'Pha chế cà phê muối, bạc xỉu, trà dâu, phục vụ khách uống sáng & học tập làm việc.',
     isWorkShift: true
   },
   {
     id: 'trua',
-    time: '10h30 - 14h30',
-    name: 'Ca Trưa (Cao Điểm Cơm Gà Xối Mỡ · Bò Lúc Lắc · Mì Xào)',
-    tasks: 'Cao điểm cơm trưa 40k & mì/hủ tiếu xào 40k. Bếp trưởng đứng chảo Wok + bếp chiên nhúng xối mỡ gà; Phụ bếp đóng hộp, múc canh, bấm bill POS và giao đơn khu vực Đông Thạnh.',
+    time: '11h30 - 16h30',
+    name: 'Ca Trưa (Nước Ép · Nước Sâm · Mì Trộn)',
+    tasks: 'Phục vụ nước giải khát, ép cam, nấu mì trộn xúc xích phục vụ khách trưa.',
     isWorkShift: true
   },
   {
-    id: 'break',
-    time: '14h30 - 16h00',
-    name: 'Nghỉ giao ca & Sơ chế chiều',
-    tasks: 'Lọc dầu qua lưới lọc dầu, châm thêm nguyên liệu vào tủ lạnh, thái thịt bò/hải sản/rau củ cho ca tối, hấp mẻ bánh bao mới.'
-  },
-  {
     id: 'chieu-toi',
-    time: '16h00 - 22h00',
-    name: 'Ca Chiều - Tối (Full Menu: Cơm · Mì Xào · Mì Cay · BBK · Ăn Vặt)',
-    tasks: 'Đón luồng khách tan ca, gia đình và giới trẻ ăn tối/ăn vặt: Cơm chiên/xào, Mì giòn, Hủ tiếu xào, Mì cay, Bánh tráng trộn, BBK & Burger nóng hổi.',
+    time: '16h30 - 22h30',
+    name: 'Ca Tối (Cao Điểm Ăn Vặt · Mì Cay · Trà Sữa)',
+    tasks: 'Bếp chiên nhúng đồ ăn vặt nóng giòn (cá viên sốt bơ tỏi, khoai tây lắc phô mai, gà lắc), nấu mì cay, tụ tập bạn bè.',
     isWorkShift: true
   },
   {
     id: 'close',
-    time: '22h00 - 22h30',
-    name: 'Đóng cửa & Chốt ca',
-    tasks: 'Lọc dầu bếp chiên nhúng, rửa khay/rổ inox 15x25, vệ sinh nồi hấp & nồi chiên không dầu, cất nguyên liệu vào tủ lạnh, khóa van gas/điện và gửi Báo cáo cuối ca.'
+    time: '22h30 - 23h00',
+    name: 'Dọn dẹp & Chốt ca đêm',
+    tasks: 'Vệ sinh máy pha/nồi chiên dầu, lau chùi bàn ghế, kiểm kê nguyên vật liệu và chốt quỹ ngày.'
   }
 ];
 
