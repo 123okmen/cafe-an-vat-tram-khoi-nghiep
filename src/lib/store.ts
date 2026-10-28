@@ -385,7 +385,7 @@ export interface Order {
   source?: string;
 }
 
-export const APP_SCRIPT_URL = "";
+export const APP_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyktPQSBZEi6FSVMDBV27SWCQSzHMItoKHG8_um4TtAvREYmkVx1PTRncc1-E-3CVZk/exec";
 export const CUSTOM_SCRIPT_URL_KEY = "cafe_anvat_dongthanh_script_url_v1";
 export const CUSTOM_SHEET_VIEW_URL_KEY = "cafe_anvat_dongthanh_sheet_view_url_v1";
 export const CONFIG_CHANGED_EVENT = "fastfood_7a_config_changed";
