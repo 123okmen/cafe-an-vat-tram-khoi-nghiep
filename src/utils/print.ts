@@ -8,8 +8,6 @@ import {
   getShift,
   findMenuPrice,
   parseOrderItems,
-  getBankConfig,
-  getVietQrUrl
 } from '../lib/store';
 
 export type PrintDocMode = 'receipt' | 'kitchen';
@@ -276,8 +274,6 @@ export function generateReceiptHtml(order: Order, mode: PrintDocMode = 'receipt'
   }
 
   // CHẾ ĐỘ 2: HÓA ĐƠN THANH TOÁN KHÁCH HÀNG
-  const bankCfg = getBankConfig();
-  const qrUrl = bankCfg.showQrOnBill && finalTotal > 0 ? getVietQrUrl(finalTotal, order.id) : '';
 
   const linesHtml = lines.map(l => `
     <tr>
@@ -366,16 +362,6 @@ export function generateReceiptHtml(order: Order, mode: PrintDocMode = 'receipt'
         ` : ''}
       </div>
 
-      ${qrUrl ? `
-        <div style="text-align: center; margin: 5px 0; padding: 4px 0; border-bottom: 1px dashed #000;">
-          <div style="font-size: ${baseFontPx - 1.5}px; font-weight: 800; margin-bottom: 2px;">QUÉT MÃ QR CHUYỂN KHOẢN</div>
-          <img src="${qrUrl}" alt="VietQR" style="width: 34mm; height: auto; display: block; margin: 0 auto;" crossorigin="anonymous" />
-          <div style="font-size: ${baseFontPx - 2}px; font-weight: 700; margin-top: 2px;">
-            ${bankCfg.bankName} • ${bankCfg.accountNo}<br/>
-            ${bankCfg.accountName}
-          </div>
-        </div>
-      ` : ''}
 
       <div style="text-align: center; margin-top: 4px; font-size: ${baseFontPx - 1.5}px; font-weight: 700;">
         Cảm ơn Quý khách & Hẹn gặp lại!

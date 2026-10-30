@@ -810,7 +810,7 @@ export function getBankConfig(): BankConfig {
     bankName: 'MBBank (Quân Đội)',
     accountNo: '0931811872',
     accountName: 'CAFE AN VAT TRAM KHOI NGHIEP',
-    showQrOnBill: true
+    showQrOnBill: false
   };
 }
 
