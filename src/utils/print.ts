@@ -296,7 +296,7 @@ export function generateReceiptHtml(order: Order, mode: PrintDocMode = 'receipt'
         <div style="font-size: ${baseFontPx + 3.5}px; font-weight: 900; letter-spacing: 0.4px; text-transform: uppercase;">${BRAND_NAME}</div>
         <div style="font-size: ${baseFontPx - 1.5}px; font-weight: 700; margin-top: 1px;">${BRAND_SUBTITLE}</div>
         <div style="font-size: ${baseFontPx - 2}px; margin-top: 2px;">ĐC: ${STORE_ADDRESS}</div>
-        <div style="font-size: ${baseFontPx - 1.5}px; font-weight: 700; margin-top: 1px;">📞 Giao hàng: ${STORE_HOTLINE}</div>
+        ${STORE_HOTLINE ? `<div style="font-size: ${baseFontPx - 1.5}px; font-weight: 700; margin-top: 1px;">📞 Giao hàng: ${STORE_HOTLINE}</div>` : ''}
       </div>
 
       <div style="display: flex; justify-content: space-between; align-items: center; margin: 4px 0; font-size: ${baseFontPx}px;">

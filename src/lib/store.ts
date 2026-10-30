@@ -4,7 +4,7 @@
 export const BRAND_NAME = 'CAFE ĂN VẶT TRẠM KHỞI NGHIỆP';
 export const BRAND_SUBTITLE = 'Bánh Mì Nướng Phô Mai · Bò Né · Bò Bít Tết · Cơm Chiên & Mì Xào';
 export const STORE_ADDRESS = '36/5E Nguyễn Thị Ngâu, Trung Đông 8, Xã Đông Thạnh, Hóc Môn, TP.HCM';
-export const STORE_HOTLINE = '0938.888.xxx';
+export const STORE_HOTLINE: string = '';
 
 export type Category = 'banh-mi-bo-ne' | 'com-xao' | 'mi-nui' | 'an-vat' | 'topping';
 

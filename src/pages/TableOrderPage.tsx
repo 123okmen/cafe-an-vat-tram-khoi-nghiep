@@ -209,7 +209,9 @@ export default function TableOrderPage() {
         <h1>🍔 {BRAND_NAME} — HÓC MÔN</h1>
         <div className="tor-hero__info-row">
           <span>📍 <strong>Địa chỉ:</strong> {STORE_ADDRESS}</span>
-          <span>📞 <strong>Hotline đặt món:</strong> <a href={`tel:${STORE_HOTLINE.replace(/\./g, '')}`} style={{ color: '#fbbf24', textDecoration: 'none' }}>{STORE_HOTLINE}</a></span>
+          {STORE_HOTLINE ? (
+            <span>📞 <strong>Hotline đặt món:</strong> <a href={`tel:${STORE_HOTLINE.replace(/\./g, '')}`} style={{ color: '#fbbf24', textDecoration: 'none' }}>{STORE_HOTLINE}</a></span>
+          ) : null}
           <span>🛵 <strong>Giao hàng:</strong> Tận nơi quanh khu vực</span>
         </div>
       </section>

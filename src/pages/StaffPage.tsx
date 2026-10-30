@@ -1699,7 +1699,7 @@ export default function StaffPage() {
                       Quét QR để xem Menu & Gọi món
                     </div>
                     <div style={{ fontSize: '0.68rem', color: '#64748b', marginTop: '2px' }}>
-                      Hotline: {STORE_HOTLINE}
+                      {STORE_HOTLINE ? `Hotline: ${STORE_HOTLINE}` : ''}
                     </div>
                   </div>
                 );
