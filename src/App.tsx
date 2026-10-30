@@ -108,12 +108,7 @@ export default function App() {
                 >
                   📊 Báo Cáo Doanh Thu
                 </button>
-                <button
-                  className={activeTab === 'plan' ? 'nav-tab active' : 'nav-tab'}
-                  onClick={() => changeTab('plan')}
-                >
-                  📋 Setup & Vận Hành
-                </button>
+
               </nav>
             )}
           </div>
