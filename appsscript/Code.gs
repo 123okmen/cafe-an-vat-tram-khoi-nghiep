@@ -1,13 +1,13 @@
 /**
  * ============================================================================
- * HỆ THỐNG GOOGLE SHEETS BACKEND - FOOD STATION 7A (QUÁN ĂN NHANH PHƯỚC THIỆN)
- * Địa chỉ: Số 2, Đường 7A, KP. Phước Thiện, P. Long Bình, TP. Thủ Đức
+ * HỆ THỐNG GOOGLE SHEETS BACKEND - CAFE ĂN VẶT TRẠM KHỞI NGHIỆP (HÓC MÔN)
+ * Địa chỉ: 36/5E Nguyễn Thị Ngâu, Trung Đông 8, Xã Đông Thạnh, Hóc Môn, TP.HCM
  * Phiên bản: 3.0 PRO (Tự động khởi tạo 6 Bảng tính + Quản lý Đơn hàng + Chi phí + Lợi nhuận)
  * ============================================================================
  *
  * HƯỚNG DẪN CÀI ĐẶT NHANH (CHỈ MẤT 1 PHÚT):
  * 1. Mở trang tính Google mới tại: https://sheets.new
- *    Đặt tên file: "QUẢN LÝ QUÁN ĂN NHANH 7A - PHƯỚC THIỆN"
+ *    Đặt tên file: "QUẢN LÝ CAFE ĂN VẶT - HÓC MÔN"
  * 2. Vào menu: Tiện ích mở rộng (Extensions) -> Apps Script
  * 3. Xóa mã mặc định và DÁN TOÀN BỘ mã này vào -> Bấm Lưu (Ctrl + S)
  * 4. Chọn hàm `setupAllSheets` trên thanh công cụ -> Bấm nút "Chạy" (Run) -> Cấp quyền
@@ -17,7 +17,7 @@
  *    - Thực thi dưới dạng: Tôi (Me)
  *    - Ai có quyền truy cập: Bất kỳ ai (Anyone)
  * 6. Copy URL Ứng dụng Web (https://script.google.com/macros/s/.../exec)
- *    và dán vào mục "🔗 Liên Kết Trang Tính" trên Web App Quán Ăn Nhanh 7A!
+ *    và dán vào mục "🔗 Liên Kết Trang Tính" trên Web App Quán Cafe Ăn Vặt Hóc Môn!
  */
 
 var TELEGRAM_TOKEN = "";   // Tùy chọn: Nhập Bot Token Telegram nếu muốn nhận tin nhắn tự động
@@ -37,7 +37,7 @@ var SHEET_NAMES = {
  * nó sẽ tự động tạo mới 1 file Google Spreadsheet hoàn chỉnh trong Google Drive của bạn!
  */
 function taoTrangTinhMoiTuDong() {
-  var ss = SpreadsheetApp.create("📊 QUẢN LÝ QUÁN ĂN NHANH 7A - PHƯỚC THIỆN");
+  var ss = SpreadsheetApp.create("📊 QUẢN LÝ CAFE ĂN VẶT - HÓC MÔN");
   Logger.log("✅ ĐÃ TẠO TRANG TÍNH MỚI THÀNH CÔNG!");
   Logger.log("👉 Link Trang Tính của bạn: " + ss.getUrl());
   setupAllSheetsForSpreadsheet(ss);
@@ -45,7 +45,7 @@ function taoTrangTinhMoiTuDong() {
 }
 
 /**
- * Chạy hàm này để tự động tạo và định dạng 6 Sheet chuẩn cho Quán Ăn Nhanh 7A
+ * Chạy hàm này để tự động tạo và định dạng 6 Sheet chuẩn cho Quán Cafe Ăn Vặt Hóc Môn
  */
 function setupAllSheets() {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
@@ -229,7 +229,7 @@ function doGet(e) {
     return ContentService.createTextOutput(JSON.stringify({
       ok: true,
       model: "FOOD_STATION_7A",
-      message: "Đã khởi tạo thành công 6 bảng tính cho FOOD STATION 7A - Phước Thiện!",
+      message: "Đã khởi tạo thành công 6 bảng tính cho CAFE ĂN VẶT TRẠM KHỞI NGHIỆP - Hóc Môn!",
       sheetUrl: ss.getUrl(),
       sheetName: ss.getName()
     })).setMimeType(ContentService.MimeType.JSON);
@@ -685,8 +685,8 @@ function refreshKpiDashboard(ss) {
 
   sKpi.clearContents();
   var rows = [
-    ["🍔 BẢNG ĐIỀU KHIỂN TỔNG HỢP - FOOD STATION 7A (PHƯỚC THIỆN)", "", ""],
-    ["Địa chỉ: Số 2, Đường 7A, KP. Phước Thiện, P. Long Bình, TP. Thủ Đức", "", "Cập nhật: " + k.ngayCapNhat],
+    ["🍔 BẢNG ĐIỀU KHIỂN TỔNG HỢP - CAFE ĂN VẶT TRẠM KHỞI NGHIỆP (HÓC MÔN)", "", ""],
+    ["Địa chỉ: 36/5E Nguyễn Thị Ngâu, Trung Đông 8, Xã Đông Thạnh, Hóc Môn, TP.HCM", "", "Cập nhật: " + k.ngayCapNhat],
     ["", "", ""],
     ["CHỈ SỐ HÔM NAY (" + k.ngayCapNhat.slice(0, 10) + ")", "GIÁ TRỊ", "GHI CHÚ"],
     ["💰 Tổng Doanh Thu Hôm Nay", k.doanhThu, "Tổng thu từ " + k.soDon + " đơn hàng"],

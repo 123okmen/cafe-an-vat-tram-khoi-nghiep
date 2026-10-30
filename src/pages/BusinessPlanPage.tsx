@@ -771,7 +771,7 @@ export default function BusinessPlanPage() {
             </div>
 
             {/* Bảng cơ chế Lương & Thưởng KPI */}
-            <h3 style={{ color: '#10b981', marginBottom: '0.75rem' }}>💰 Bảng Chi Phí Nhân Sự Thực Tế Tại TP. Thủ Đức</h3>
+            <h3 style={{ color: '#10b981', marginBottom: '0.75rem' }}>💰 Bảng Chi Phí Nhân Sự Thực Tế Tại Đông Thạnh, Hóc Môn</h3>
             <div style={{ overflowX: 'auto' }}>
               <table style={{ width: '100%', borderCollapse: 'collapse', fontSize: '0.88rem' }}>
                 <thead>

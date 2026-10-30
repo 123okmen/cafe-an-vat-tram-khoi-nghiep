@@ -203,10 +203,10 @@ export default function TableOrderPage() {
             🟢 Đang mở cửa (06h00 – 22h30)
           </span>
           <span className="tor-hero__pill" style={{ color: '#fbbf24', borderColor: 'rgba(245, 158, 11, 0.4)', background: 'rgba(245, 158, 11, 0.15)' }}>
-            🥟 Bánh Bao Kẹp 18K - 26K · 🍛 Cơm Chiên 25K - 40K · 🍜 Mì Xào 40K
+            🥖 Bánh Mì Bò Né · 🥩 Bò Bít Tết · 🍛 Cơm Chiên & Mì Xào
           </span>
         </div>
-        <h1>🍔 {BRAND_NAME} — PHƯỚC THIỆN</h1>
+        <h1>🍔 {BRAND_NAME} — HÓC MÔN</h1>
         <div className="tor-hero__info-row">
           <span>📍 <strong>Địa chỉ:</strong> {STORE_ADDRESS}</span>
           <span>📞 <strong>Hotline đặt món:</strong> <a href={`tel:${STORE_HOTLINE.replace(/\./g, '')}`} style={{ color: '#fbbf24', textDecoration: 'none' }}>{STORE_HOTLINE}</a></span>
@@ -302,7 +302,7 @@ export default function TableOrderPage() {
               <input
                 className="input-field"
                 style={{ padding: '0.5rem 0.8rem', fontSize: '0.86rem' }}
-                placeholder="📍 Địa chỉ giao (Số nhà, Đường 7A / Tòa Vinhomes) *"
+                placeholder="📍 Địa chỉ giao hàng (Số nhà, tên đường, khu vực Đông Thạnh, Hóc Môn) *"
                 value={customerAddress}
                 onChange={e => setCustomerAddress(e.target.value)}
               />

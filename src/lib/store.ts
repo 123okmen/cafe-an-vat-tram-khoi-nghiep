@@ -3,7 +3,7 @@
 
 export const BRAND_NAME = 'CAFE ĂN VẶT TRẠM KHỞI NGHIỆP';
 export const BRAND_SUBTITLE = 'Bánh Mì Nướng Phô Mai · Bò Né · Bò Bít Tết · Cơm Chiên & Mì Xào';
-export const STORE_ADDRESS = '36/5E Nguyễn Thị Ngâu, Trung Đông 8, Xã Đông Thạnh, TP.HCM';
+export const STORE_ADDRESS = '36/5E Nguyễn Thị Ngâu, Trung Đông 8, Xã Đông Thạnh, Hóc Môn, TP.HCM';
 export const STORE_HOTLINE = '0938.888.xxx';
 
 export type Category = 'banh-mi-bo-ne' | 'com-xao' | 'mi-nui' | 'an-vat' | 'topping';
@@ -299,7 +299,7 @@ export const CUSTOM_SCRIPT_URL_KEY = "cafe_anvat_dongthanh_script_url_v1";
 export const CUSTOM_SHEET_VIEW_URL_KEY = "cafe_anvat_dongthanh_sheet_view_url_v1";
 export const CONFIG_CHANGED_EVENT = "fastfood_7a_config_changed";
 
-/** Key localStorage dùng riêng cho mô hình quán ăn nhanh Phước Thiện */
+/** Key localStorage dùng riêng cho mô hình quán ăn nhanh Hóc Môn */
 export const ORDERS_KEY = 'cafe_anvat_dongthanh_orders_v1';
 export const ORDERS_CHANGED_EVENT = 'fastfood_7a_orders_changed';
 export const EXPENSES_KEY = 'cafe_anvat_dongthanh_expenses_v1';
