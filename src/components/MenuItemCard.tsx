@@ -12,22 +12,17 @@ interface Props {
 
 function getItemEmoji(item: MenuItem, fallback: string): string {
   const n = item.name.toLowerCase();
-  if (n.includes('trứng')) return '🍳';
-  if (n.includes('gà xối mỡ') || n.includes('gà chiên') || n.includes('gà rán')) return '🍗';
-  if (n.includes('hải sản') || n.includes('tôm')) return '🦐';
-  if (n.includes('bò lúc lắc') || n.includes('bò xào') || n.includes('xào bò')) return '🥩';
-  if (n.includes('sườn')) return '🍖';
-  if (n.includes('mì giòn')) return '🍝';
-  if (n.includes('hủ tiếu')) return '🍜';
-  if (n.includes('bbk') || n.includes('bánh bao')) return '🥟';
-  if (n.includes('hamburger')) return '🍔';
-  if (n.includes('sandwich')) return '🥪';
+  if (n.includes('bánh mì') || n.includes('bò né')) return '🥖';
+  if (n.includes('bò') || n.includes('bít tết') || n.includes('lúc lắc')) return '🥩';
+  if (n.includes('mực') || n.includes('hải sản') || n.includes('tôm')) return '🦐';
+  if (n.includes('cơm')) return '🍛';
+  if (n.includes('nui') || n.includes('mì ý') || n.includes('spaghetti')) return '🍝';
   if (n.includes('mì cay')) return '🌶️';
-  if (n.includes('mì trộn')) return '🥢';
-  if (n.includes('bánh tráng')) return '🥗';
-  if (n.includes('xúc xích')) return '🌭';
+  if (n.includes('mì')) return '🍜';
+  if (n.includes('khoai tây')) return '🍟';
+  if (n.includes('trứng')) return '🍳';
   if (n.includes('phô mai')) return '🧀';
-  if (n.includes('pepsi') || n.includes('coca') || n.includes('trà đá')) return '🥤';
+  if (n.includes('nước') || n.includes('trà đá') || n.includes('coca') || n.includes('pepsi')) return '🥤';
   return fallback;
 }
 
