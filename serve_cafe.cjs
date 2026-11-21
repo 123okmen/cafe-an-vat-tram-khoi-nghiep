@@ -19,9 +19,22 @@ const MIME_TYPES = {
   '.webp': 'image/webp'
 };
 
+const SECURITY_HEADERS = {
+  'X-Content-Type-Options': 'nosniff',
+  'X-Frame-Options': 'SAMEORIGIN',
+  'Referrer-Policy': 'strict-origin-when-cross-origin',
+  'Permissions-Policy': 'bluetooth=(self), camera=(self), microphone=(), geolocation=()',
+  'Cross-Origin-Opener-Policy': 'same-origin'
+};
+
+const resolvedDistDir = path.resolve(DIST_DIR);
+
 const server = http.createServer((req, res) => {
-  // Enable CORS
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  Object.entries(SECURITY_HEADERS).forEach(([k, v]) => res.setHeader(k, v));
+  const origin = req.headers.origin || '';
+  if (origin.startsWith('http://localhost:') || origin.startsWith('http://127.0.0.1:')) {
+    res.setHeader('Access-Control-Allow-Origin', origin);
+  }
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
 
@@ -31,15 +44,36 @@ const server = http.createServer((req, res) => {
     return;
   }
 
-  let reqPath = decodeURI(req.url.split('?')[0]);
+  let reqPath = '/';
+  try {
+    reqPath = decodeURIComponent((req.url || '/').split('?')[0]);
+  } catch {
+    res.writeHead(400, { 'Content-Type': 'text/plain; charset=utf-8' });
+    res.end('400 Bad Request');
+    return;
+  }
+
+  if (reqPath.includes('\0')) {
+    res.writeHead(400, { 'Content-Type': 'text/plain; charset=utf-8' });
+    res.end('400 Bad Request');
+    return;
+  }
+
   if (reqPath === '/' || reqPath === '') reqPath = '/index.html';
 
-  let filePath = path.join(DIST_DIR, reqPath);
+  let filePath = path.resolve(resolvedDistDir, '.' + (reqPath.startsWith('/') ? reqPath : '/' + reqPath));
+
+  // Block Path Traversal outside DIST_DIR (CWE-22)
+  if (filePath !== path.join(resolvedDistDir, 'index.html') && !filePath.startsWith(resolvedDistDir + path.sep)) {
+    res.writeHead(403, { 'Content-Type': 'text/plain; charset=utf-8' });
+    res.end('403 Forbidden');
+    return;
+  }
 
   // SPA fallback
   if (!fs.existsSync(filePath) || fs.statSync(filePath).isDirectory()) {
     if (!path.extname(reqPath)) {
-      filePath = path.join(DIST_DIR, 'index.html');
+      filePath = path.join(resolvedDistDir, 'index.html');
     }
   }
 
