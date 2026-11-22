@@ -1,4 +1,4 @@
-import { useMemo, useState } from 'react';
+import { useMemo, useState, useEffect } from 'react';
 import MenuItemCard from '../components/MenuItemCard';
 import {
   BRAND_NAME, CATEGORIES, MENU, STORE_ADDRESS, STORE_HOTLINE,
@@ -32,6 +32,23 @@ function tableFromUrl(): number | '' {
 }
 
 export default function TableOrderPage() {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
+
+    const els = document.querySelectorAll('.reveal');
+    els.forEach(el => observer.observe(el));
+    // fallback: khong de noi dung bi an neu observer khong kich hoat
+    const t = setTimeout(() => els.forEach(el => el.classList.add('visible')), 1500);
+    return () => { clearTimeout(t); observer.disconnect(); };
+  }, []);
+
   const [activeCat, setActiveCat] = useState<Category | 'all'>('all');
   const [searchQuery, setSearchQuery] = useState('');
   const [cart, setCart] = useState<OrderLine[]>([]);
@@ -194,7 +211,7 @@ export default function TableOrderPage() {
   return (
     <div className="tor">
       {/* Banner thông tin quán & Menu nổi bật phong cách nhà hàng */}
-      <section className="tor-hero">
+      <section className="tor-hero reveal">
         <div className="tor-hero__badge-row">
           <span className="tor-hero__badge">
             ★ THƯƠNG HIỆU ẨM THỰC CHỌN LỌC
@@ -250,7 +267,7 @@ export default function TableOrderPage() {
             if (items.length === 0) return null;
 
             return (
-              <section key={c.id} className="glass-panel tor-section">
+              <section key={c.id} className="glass-panel tor-section reveal">
                 <h2 style={{ color: c.color }}>{c.emoji} {c.label}</h2>
                 <div className="menu-grid">
                   {items.map(item => (
@@ -262,7 +279,7 @@ export default function TableOrderPage() {
           })}
         </div>
 
-        <aside id="tor-cart" className="glass-panel order-layout__cart tor-cart">
+        <aside id="tor-cart" className="glass-panel order-layout__cart tor-cart reveal">
           <h2>
             <span>🛒 Đơn gọi món</span>
             {itemCount > 0 && <span style={{ fontSize: '0.85rem', color: '#10b981' }}>{itemCount} món</span>}

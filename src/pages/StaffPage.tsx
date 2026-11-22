@@ -1563,7 +1563,7 @@ export default function StaffPage() {
                   disabled={isSubmitting}
                   className="btn-primary"
                   style={{
-                    background: 'linear-gradient(135deg, #ef4444, #b91c1c)',
+                    background: '#ef4444',
                     padding: '0.85rem',
                     fontSize: '1rem',
                     fontWeight: 800
@@ -1810,7 +1810,7 @@ export default function StaffPage() {
                   value={offData.reason} onChange={e => setOffData({ ...offData, reason: e.target.value })} required />
               </div>
               <button type="submit" disabled={isSubmitting} className="btn-primary"
-                style={{ background: 'linear-gradient(135deg, #e74c3c 0%, #c0392b 100%)', padding: '0.8rem', fontSize: '1rem', fontWeight: 'bold' }}>
+                style={{ background: '#e74c3c', padding: '0.8rem', fontSize: '1rem', fontWeight: 'bold' }}>
                 🚀 Gửi Báo Cáo Xin Nghỉ (Off Ca)
               </button>
             </form>
@@ -1938,7 +1938,7 @@ export default function StaffPage() {
                   🖨️ In Phiếu Chốt Ca ({paperSizeState}mm)
                 </button>
                 <button type="button" onClick={handleSendSummary} disabled={isSubmitting} className="btn-primary"
-                  style={{ background: 'linear-gradient(135deg, #00b09b 0%, #96c93d 100%)', padding: '0.5rem 0.9rem', fontSize: '0.82rem', fontWeight: 'bold' }}>
+                  style={{ background: '#00b09b', padding: '0.5rem 0.9rem', fontSize: '0.82rem', fontWeight: 'bold' }}>
                   🚀 Gửi Tổng Hợp Nhanh
                 </button>
               </div>
@@ -1963,7 +1963,7 @@ export default function StaffPage() {
                 </div>
               </div>
               <button type="button" onClick={handleAutoFillReport}
-                style={{ background: 'linear-gradient(90deg, #10b981 0%, #059669 100%)', color: '#fff', border: 'none', padding: '8px 12px', borderRadius: '8px', cursor: 'pointer', fontSize: '0.85rem', fontWeight: 'bold', width: '100%' }}>
+                style={{ background: '#10b981', color: '#fff', border: 'none', padding: '8px 12px', borderRadius: '8px', cursor: 'pointer', fontSize: '0.85rem', fontWeight: 'bold', width: '100%' }}>
                 ⚡ TỰ ĐIỀN CHÍNH XÁC DOANH THU & TIỀN MẶT & CHUYỂN KHOẢN CA NÀY
               </button>
             </div>

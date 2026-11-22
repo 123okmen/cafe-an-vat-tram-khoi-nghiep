@@ -1,19 +1,36 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './LandingPage.css';
 
 export default function LandingPage() {
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0, rootMargin: '0px 0px -40px 0px' });
+
+    const els = document.querySelectorAll('.reveal');
+    els.forEach(el => observer.observe(el));
+    // fallback: khong de noi dung bi an neu observer khong kich hoat
+    const t = setTimeout(() => els.forEach(el => el.classList.add('visible')), 1500);
+    return () => { clearTimeout(t); observer.disconnect(); };
+  }, []);
+
   const [isAboutOpen, setIsAboutOpen] = useState(false);
 
   return (
     <div className="landing-body">
-      <div className="menu-board">
+      <div className="menu-board reveal">
           <div className="landing-header" style={{ textAlign: 'center', marginBottom: '25px', display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
               <img src={`${import.meta.env.BASE_URL}logo_v2.jpg`} alt="Sâm Mix Logo" style={{ width: '130px', height: '130px', borderRadius: '50%', objectFit: 'cover', border: '4px solid #f39c12', marginBottom: '15px', boxShadow: '0 6px 12px rgba(0,0,0,0.4)' }} />
               <h1 style={{ fontSize: '2.8rem', margin: '0 0 5px 0', textTransform: 'uppercase', letterSpacing: '2px', color: '#f1c40f', textShadow: '2px 2px 4px rgba(0,0,0,0.5)' }}>SÂM MIX</h1>
               <h2 style={{ fontSize: '1.3rem', fontWeight: '700', color: '#ff9f43', margin: '5px 0 0 0', letterSpacing: '1px', textShadow: '2px 2px 4px rgba(0,0,0,0.8)', background: 'rgba(0,0,0,0.3)', padding: '5px 15px', borderRadius: '20px', border: '1px solid rgba(255,159,67,0.3)' }}>"Thanh Mát Tự Nhiên, Trọn Vị Bình Yên"</h2>
           </div>
 
-          <div className="about-section">
+          <div className="about-section reveal">
               <h3 
                 onClick={() => setIsAboutOpen(!isAboutOpen)}
                 style={{ cursor: 'pointer', display: 'flex', justifyContent: 'space-between', alignItems: 'center', margin: 0 }}
@@ -30,9 +47,9 @@ export default function LandingPage() {
               )}
           </div>
 
-          <div className="columns">
+          <div className="columns reveal">
               {/* Sâm Mix Column */}
-              <div className="column">
+              <div className="column reveal">
                   <div className="col-title">
                       🌿 NƯỚC SÂM THẢO MỘC
                   </div>
@@ -69,7 +86,7 @@ export default function LandingPage() {
 
               
               {/* Cà Phê Phin Column */}
-              <div className="column">
+              <div className="column reveal">
                   <div className="col-title">
                       ☕ CÀ PHÊ PHIN
                   </div>
@@ -94,7 +111,7 @@ export default function LandingPage() {
               </div>
 
               {/* Đồ Ăn Vặt Column */}
-              <div className="column">
+              <div className="column reveal">
                   <div className="col-title">
                       🍢 ĐỒ ĂN VẶT
                   </div>
@@ -134,7 +151,7 @@ export default function LandingPage() {
               </div>
 
               {/* Nước Ép Column */}
-              <div className="column">
+              <div className="column reveal">
                   <div className="col-title">
                       🍊 NƯỚC ÉP TRÁI CÂY TƯƠI
                   </div>
@@ -195,7 +212,7 @@ export default function LandingPage() {
               </div>
           </div>
 
-          <div className="location-section" style={{ textAlign: 'center', padding: '30px 15px', backgroundColor: 'rgba(255, 255, 255, 0.1)', borderRadius: '15px', margin: '20px 0' }}>
+          <div className="location-section reveal" style={{ textAlign: 'center', padding: '30px 15px', backgroundColor: 'rgba(255, 255, 255, 0.1)', borderRadius: '15px', margin: '20px 0' }}>
               <h3 style={{ marginBottom: '15px', color: '#f1c40f' }}>📍 Bản Đồ & Chỉ Đường</h3>
               <p style={{ marginBottom: '15px' }}>
                  <a href="https://www.google.com/maps/place/Conic+Garden+A,+B%C3%ACnh+H%C6%B0ng,+H%E1%BB%93+Ch%C3%AD+Minh,+Vi%E1%BB%87t+Nam/@10.7178461,106.63765,17z/data=!4m6!3m5!1s0x31752e0f0b58e75b:0xf97af1f03aa15943!8m2!3d10.7178461!4d106.63765!16s%2Fg%2F12hqyml_q?entry=ttu&g_ep=EgoyMDI2MDcyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" style={{ color: '#27ae60', fontWeight: 'bold', textDecoration: 'none', fontSize: '1.1em', display: 'inline-block', padding: '10px 15px', backgroundColor: '#fff', borderRadius: '8px' }}>

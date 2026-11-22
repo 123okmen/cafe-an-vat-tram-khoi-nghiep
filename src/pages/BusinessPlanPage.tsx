@@ -343,7 +343,7 @@ export default function BusinessPlanPage() {
         className="glass-panel"
         style={{
           marginBottom: '1.5rem',
-          background: 'linear-gradient(135deg, rgba(15, 23, 42, 0.95) 0%, rgba(30, 41, 59, 0.92) 100%)',
+          background: 'rgba(15, 23, 42, 0.95)',
           borderTop: '4px solid #f59e0b'
         }}
       >
